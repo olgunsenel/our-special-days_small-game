@@ -23,13 +23,13 @@ document.querySelector(`.check-btn`).addEventListener(`click`, () => {
   // const secretDay = document.querySelector(`.secret-date`).innerHTML
   console.log(indexNo);
   if(!guessDate){
-    infoMessage.textContent = `Lütfen aşağıdan bizim için önemli tarihlerden birini seç :D`
+    infoMessage.textContent = `ZehraNur'cuğum, lütfen aşağıdan bizim için önemli tarihlerden birini seç :D`
     infoMessage.style.color = `red`
     //! dates objesinin value'su girilen tarih degerini iceriyorsa
   }else if(Object.values(dates).includes(guessDate)) {
     if(known.includes(guessDate)) {
       console.log(typeof known, known);
-      infoMessage.textContent = `Bu tarihi daha once girdin :P`;
+      infoMessage.textContent = `Bu tarihi daha once girdin tatlım :P`;
       infoMessage.style.color = `red`;
       document.querySelector(`.date-input`).focus();
       document.querySelector(`.date-input`).value = ``;
@@ -46,12 +46,12 @@ document.querySelector(`.check-btn`).addEventListener(`click`, () => {
         document.querySelector(`.date-input`).value = ``;
       }else {
         document.querySelector(`.check-btn`).disabled = true;
-        document.querySelector(`.remain-all`).innerHTML = `Tebrikler, hepsini bildin!<img src="https://media.tenor.com/39cYcxX8HeoAAAAM/omg-chris-pratt.gif" width="250">`;
+        document.querySelector(`.remain-all`).innerHTML = `Tebrikler aşkım, hepsini bildin! <img src="https://media.tenor.com/39cYcxX8HeoAAAAM/omg-chris-pratt.gif" width="250">`;
         document.querySelector(`.remain-all`).style.color = `#ffd504`;
         infoMessage.remove();
       }};
   }else {
-    infoMessage.textContent = `Böyle bir tarih bulunamadı. Tekrar dene!`
+    infoMessage.textContent = `Böyle bir tarihimiz burda yok. Tekrar dene! :P`
     infoMessage.style.color = `red`
     document.querySelector(`.secret-date`).innerHTML = "?"
     document.querySelector("body").classList.remove("bodybg");
